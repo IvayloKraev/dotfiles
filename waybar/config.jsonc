@@ -1,23 +1,58 @@
 {
-	"height": 20, 
+	"height": 20,
+	"spacing": 5,
 	"layer": "top",
 	"position": "top",
 	"modules-left": [
+		"custom/openbracket",
 		"custom/archicon",
+		"custom/split",
 		"clock",
+		"custom/closebracket",
+		"custom/openbracket",
 		"cpu",
+		"custom/split",
 		"memory",
-		"temperature"
+		"custom/split",
+		"temperature",
+		"custom/closebracket"
 	],
 	"modules-center": [
-		"hyprland/workspaces"
+		"custom/openbracket",
+		"hyprland/workspaces",
+		"custom/closebracket"
 	],
 	"modules-right": [
+		"custom/openbracket",
 		"pulseaudio",
+		"mpris",
+		"custom/closebracket",
+		"custom/openbracket",
 		"network",
+		"custom/split",
 		"bluetooth",
-		"battery"
+		"custom/closebracket",
+		"custom/openbracket",
+		"battery",
+		"custom/closebracket"
 	],
+	"custom/archicon": {
+		"format": "󰣇",
+		"tooltip": false,
+		"on-click": "wofi --show drun"
+	},
+	"custom/openbracket": {
+		"format": "[",
+		"tooltip": false
+	},
+	"custom/closebracket": {
+		"format": "]",
+		"tooltip": false
+	},
+	"custom/split": {
+		"format": "|",
+		"tooltip": false
+	},
 	"clock": {
 		"interval": 10,
 		"format": "{:%H:%M}",
@@ -25,30 +60,43 @@
 	},
 	"cpu": {
 		"interval": 1,
-		"format": "{usage}%"
+		"format": "CPU {usage}%"
 	},
 	"memory": {
 		"interval": 1,
-		"format": "{used:0.1f}G/{total:0.1f}G"
+		"format": "RAM {percentage}%"
 	},
 	"temperature": {
 		"interval": 1,
-		"format": "{temperatureC}°C"
+		"format": "TEMP {temperatureC}°C"
 	},
 	"hyprland/workspaces": {
-		"format": "",
+		"format": "{icon}",
 		"persistent-workspaces": {
-			"*": 5
+			"*": 6
 		}
 	},
 	"pulseaudio": {
-		"format": "{volume}% {icon}",
-		"format-icons": [
-			""
-		]
+		"format": "VOL {volume}%"
+	},
+	"mpris": {
+		"format": "{status_icon} {title}",
+		"status-icons": {
+			"playing": "PLAYING",
+			"paused": "PAUSED"
+		},
+		"title-len": 30
 	},
 	"network": {
-		"format": "{ifname} {bandwidthUpBytes} {bandwidthDownBytes}",
-		"interval": 1
+		"format-ethernet": "LAN  TX {bandwidthUpBytes} RX {bandwidthDownBytes}",
+		"format-wifi": "WI-FI  TX {bandwidthUpBytes} RX {bandwidthDownBytes}",
+		"interval": 1,
+		"min-length": 14
+	},
+	"bluetooth": {
+		"format": "BT {device_alias}"
+	},
+	"battery": {
+		"format": "BAT {capacity}%"
 	}
 }

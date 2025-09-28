@@ -1,0 +1,57 @@
+@define-color background #524B47;
+@define-color border #222526;
+@define-color text #efefef;
+
+window#waybar {
+	all:unset;
+}
+
+.modules-left {
+	background: @background;
+	padding: 0px 8px;
+	margin-left: 8px;
+	margin-top: 8px;
+	border: 2px solid @border;
+	border-radius: 4px;
+	color: @text;
+}
+
+.modules-center {
+	background: @background;
+	padding: 0px 8px;
+	margin-top: 8px;
+	border: 2px solid @border;
+	border-radius:4px;
+	color: @text;
+}
+
+.modules-right {
+	background: @background;
+	padding: 0px 8px;
+	margin-top: 8px;
+	margin-right: 8px;
+	border:2px solid @border;
+	border-radius: 4px;
+}
+
+#custom-openbracket {
+	margin-left: 4px;
+	margin-right: 2px;
+}
+
+#custom-closebracket {
+	margin-left: 2px;
+	margin-right: 4px;
+}
+
+#custom-split {
+	margin: 0px 4px;
+}
+
+#workspaces button {
+	padding: 0px 4px;
+}
+
+#network {
+	min-width: 220px;
+}
