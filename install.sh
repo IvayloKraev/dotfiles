@@ -19,3 +19,9 @@ sudo pacman -Suy git github-cli nvim
 gh auth login
 gh auth setup-git
 git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+
+# Additional programms
+sudo pacman -Suy yazi htop firefox
+
+# Audio
+sudo pacman -Suy pipewire pipewire-jack pipewire-pulse
