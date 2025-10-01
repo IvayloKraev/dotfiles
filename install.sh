@@ -19,6 +19,7 @@ sudo pacman -Suy git github-cli nvim
 gh auth login
 gh auth setup-git
 git clone https://github.com/NvChad/starter ~/.config/nvim
+git config --global core.editor "nvim"
 
 # Additional programms
 sudo pacman -Suy yazi htop firefox
