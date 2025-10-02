@@ -26,3 +26,10 @@ sudo pacman -Suy yazi htop firefox
 
 # Audio
 sudo pacman -Suy pipewire pipewire-jack pipewire-pulse
+
+# yay
+cd ~
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+cd ~
