@@ -33,3 +33,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ~
+
+# JetBrains Toolbox
+curl -o jetbrains-toolbox.tar.gz https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-2.9.1.58121.tar.gz
+tar -xf jetbrains-toolbox.tar.gz
+
