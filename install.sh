@@ -38,3 +38,6 @@ cd ~
 curl -o jetbrains-toolbox.tar.gz https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-2.9.1.58121.tar.gz
 tar -xf jetbrains-toolbox.tar.gz
 
+# ARM
+sudo pacman -Suy arm-none-eabi-gcc
+
